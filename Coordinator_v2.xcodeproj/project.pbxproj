@@ -1,0 +1,551 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2392CBAB28A42BD100A5B8A7 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392CBAA28A42BD100A5B8A7 /* BaseNavigationController.swift */; };
+		23A3D12528A3923200B194A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3D12428A3923200B194A3 /* AppDelegate.swift */; };
+		23A3D12928A3923200B194A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3D12828A3923200B194A3 /* ViewController.swift */; };
+		23A3D12C28A3923200B194A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A3D12A28A3923200B194A3 /* Main.storyboard */; };
+		23A3D12E28A3923400B194A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A3D12D28A3923400B194A3 /* Assets.xcassets */; };
+		23A3D13128A3923400B194A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A3D12F28A3923400B194A3 /* LaunchScreen.storyboard */; };
+		23A3D13A28A3928B00B194A3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3D13928A3928B00B194A3 /* Coordinator.swift */; };
+		23A3D13C28A3929300B194A3 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3D13B28A3929300B194A3 /* MainCoordinator.swift */; };
+		23A3D13E28A3941300B194A3 /* StoryBoarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3D13D28A3941300B194A3 /* StoryBoarded.swift */; };
+		23A3D14128A39A4D00B194A3 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A3D14028A39A4D00B194A3 /* SignIn.storyboard */; };
+		23A3D14328A39A5A00B194A3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3D14228A39A5A00B194A3 /* SignInViewController.swift */; };
+		23A3D14D28A3A4EF00B194A3 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A3D14C28A3A4EF00B194A3 /* Dashboard.storyboard */; };
+		23A3D14F28A3A4FA00B194A3 /* CashIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A3D14E28A3A4FA00B194A3 /* CashIn.storyboard */; };
+		23A3D15128A3A50300B194A3 /* CashInConfirm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A3D15028A3A50300B194A3 /* CashInConfirm.storyboard */; };
+		23A3D15328A3A50F00B194A3 /* CashInSuccess.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A3D15228A3A50F00B194A3 /* CashInSuccess.storyboard */; };
+		23A3D15528A3A52600B194A3 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3D15428A3A52600B194A3 /* DashboardViewController.swift */; };
+		23A3D15728A3A53000B194A3 /* CashInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3D15628A3A53000B194A3 /* CashInViewController.swift */; };
+		23A3D15928A3A53D00B194A3 /* CashInConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3D15828A3A53D00B194A3 /* CashInConfirmViewController.swift */; };
+		23A3D15B28A3A54700B194A3 /* CashInSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3D15A28A3A54700B194A3 /* CashInSuccessViewController.swift */; };
+		23A3D15D28A3A73200B194A3 /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3D15C28A3A73200B194A3 /* DashboardCoordinator.swift */; };
+		23A3D15F28A3A9FF00B194A3 /* CashInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3D15E28A3A9FF00B194A3 /* CashInCoordinator.swift */; };
+		23A3D16128A3AA4500B194A3 /* CashInConfirmCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3D16028A3AA4500B194A3 /* CashInConfirmCoordinator.swift */; };
+		23A3D16328A3BB3C00B194A3 /* CashInSuccessCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3D16228A3BB3C00B194A3 /* CashInSuccessCoordinator.swift */; };
+		23E40EC929AC8DC40014A3AD /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E40EC829AC8DC40014A3AD /* TransactionsViewController.swift */; };
+		23E40ECB29AC8DDC0014A3AD /* QRPayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E40ECA29AC8DDC0014A3AD /* QRPayViewController.swift */; };
+		23E40ECD29AC8DE30014A3AD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E40ECC29AC8DE30014A3AD /* SettingsViewController.swift */; };
+		23E40ECF29AC8E150014A3AD /* TransactionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E40ECE29AC8E150014A3AD /* TransactionsCoordinator.swift */; };
+		23E40ED129AC8E1C0014A3AD /* QRPayCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E40ED029AC8E1C0014A3AD /* QRPayCoordinator.swift */; };
+		23E40ED329AC8E3A0014A3AD /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E40ED229AC8E3A0014A3AD /* SettingsCoordinator.swift */; };
+		23E40ED629AC8F4F0014A3AD /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E40ED529AC8F4F0014A3AD /* BaseTabBarController.swift */; };
+		23E40ED829AC92C40014A3AD /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E40ED729AC92C40014A3AD /* SignInCoordinator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2392CBAA28A42BD100A5B8A7 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		23A3D12128A3923200B194A3 /* Coordinator_v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coordinator_v2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23A3D12428A3923200B194A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		23A3D12828A3923200B194A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		23A3D12B28A3923200B194A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		23A3D12D28A3923400B194A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		23A3D13028A3923400B194A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		23A3D13228A3923400B194A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23A3D13928A3928B00B194A3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		23A3D13B28A3929300B194A3 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		23A3D13D28A3941300B194A3 /* StoryBoarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoarded.swift; sourceTree = "<group>"; };
+		23A3D14028A39A4D00B194A3 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		23A3D14228A39A5A00B194A3 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		23A3D14C28A3A4EF00B194A3 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		23A3D14E28A3A4FA00B194A3 /* CashIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CashIn.storyboard; sourceTree = "<group>"; };
+		23A3D15028A3A50300B194A3 /* CashInConfirm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CashInConfirm.storyboard; sourceTree = "<group>"; };
+		23A3D15228A3A50F00B194A3 /* CashInSuccess.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CashInSuccess.storyboard; sourceTree = "<group>"; };
+		23A3D15428A3A52600B194A3 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		23A3D15628A3A53000B194A3 /* CashInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashInViewController.swift; sourceTree = "<group>"; };
+		23A3D15828A3A53D00B194A3 /* CashInConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashInConfirmViewController.swift; sourceTree = "<group>"; };
+		23A3D15A28A3A54700B194A3 /* CashInSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashInSuccessViewController.swift; sourceTree = "<group>"; };
+		23A3D15C28A3A73200B194A3 /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
+		23A3D15E28A3A9FF00B194A3 /* CashInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashInCoordinator.swift; sourceTree = "<group>"; };
+		23A3D16028A3AA4500B194A3 /* CashInConfirmCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashInConfirmCoordinator.swift; sourceTree = "<group>"; };
+		23A3D16228A3BB3C00B194A3 /* CashInSuccessCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashInSuccessCoordinator.swift; sourceTree = "<group>"; };
+		23E40EC829AC8DC40014A3AD /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		23E40ECA29AC8DDC0014A3AD /* QRPayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRPayViewController.swift; sourceTree = "<group>"; };
+		23E40ECC29AC8DE30014A3AD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		23E40ECE29AC8E150014A3AD /* TransactionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsCoordinator.swift; sourceTree = "<group>"; };
+		23E40ED029AC8E1C0014A3AD /* QRPayCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRPayCoordinator.swift; sourceTree = "<group>"; };
+		23E40ED229AC8E3A0014A3AD /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		23E40ED529AC8F4F0014A3AD /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		23E40ED729AC92C40014A3AD /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23A3D11E28A3923200B194A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23A3D11828A3923200B194A3 = {
+			isa = PBXGroup;
+			children = (
+				23A3D12328A3923200B194A3 /* Coordinator_v2 */,
+				23A3D12228A3923200B194A3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		23A3D12228A3923200B194A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23A3D12128A3923200B194A3 /* Coordinator_v2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23A3D12328A3923200B194A3 /* Coordinator_v2 */ = {
+			isa = PBXGroup;
+			children = (
+				23A3D12428A3923200B194A3 /* AppDelegate.swift */,
+				23A3D13D28A3941300B194A3 /* StoryBoarded.swift */,
+				2392CBAA28A42BD100A5B8A7 /* BaseNavigationController.swift */,
+				23E40ED529AC8F4F0014A3AD /* BaseTabBarController.swift */,
+				23A3D13828A3927A00B194A3 /* Coordinator */,
+				23A3D14728A3A48700B194A3 /* Main */,
+				23A3D14628A3A47100B194A3 /* Signin */,
+				23E40EC729AC8D520014A3AD /* Transactions */,
+				23E40EC529AC8D310014A3AD /* QRPay */,
+				23E40EC629AC8D450014A3AD /* Settings */,
+				23A3D14828A3A49900B194A3 /* Dashboard */,
+				23A3D14928A3A4AA00B194A3 /* CashIn */,
+				23A3D14A28A3A4B100B194A3 /* CashInConfirm */,
+				23A3D14B28A3A4C400B194A3 /* CashInSuccess */,
+				23A3D12D28A3923400B194A3 /* Assets.xcassets */,
+				23A3D12F28A3923400B194A3 /* LaunchScreen.storyboard */,
+				23A3D13228A3923400B194A3 /* Info.plist */,
+			);
+			path = Coordinator_v2;
+			sourceTree = "<group>";
+		};
+		23A3D13828A3927A00B194A3 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				23A3D13928A3928B00B194A3 /* Coordinator.swift */,
+				23A3D13B28A3929300B194A3 /* MainCoordinator.swift */,
+				23A3D13F28A396AA00B194A3 /* ChildCoordinator */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		23A3D13F28A396AA00B194A3 /* ChildCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				23E40ED729AC92C40014A3AD /* SignInCoordinator.swift */,
+				23A3D15C28A3A73200B194A3 /* DashboardCoordinator.swift */,
+				23E40ECE29AC8E150014A3AD /* TransactionsCoordinator.swift */,
+				23E40ED029AC8E1C0014A3AD /* QRPayCoordinator.swift */,
+				23E40ED229AC8E3A0014A3AD /* SettingsCoordinator.swift */,
+				23A3D15E28A3A9FF00B194A3 /* CashInCoordinator.swift */,
+				23A3D16028A3AA4500B194A3 /* CashInConfirmCoordinator.swift */,
+				23A3D16228A3BB3C00B194A3 /* CashInSuccessCoordinator.swift */,
+			);
+			path = ChildCoordinator;
+			sourceTree = "<group>";
+		};
+		23A3D14628A3A47100B194A3 /* Signin */ = {
+			isa = PBXGroup;
+			children = (
+				23A3D14028A39A4D00B194A3 /* SignIn.storyboard */,
+				23A3D14228A39A5A00B194A3 /* SignInViewController.swift */,
+			);
+			path = Signin;
+			sourceTree = "<group>";
+		};
+		23A3D14728A3A48700B194A3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				23A3D12828A3923200B194A3 /* ViewController.swift */,
+				23A3D12A28A3923200B194A3 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		23A3D14828A3A49900B194A3 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				23A3D14C28A3A4EF00B194A3 /* Dashboard.storyboard */,
+				23A3D15428A3A52600B194A3 /* DashboardViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		23A3D14928A3A4AA00B194A3 /* CashIn */ = {
+			isa = PBXGroup;
+			children = (
+				23A3D14E28A3A4FA00B194A3 /* CashIn.storyboard */,
+				23A3D15628A3A53000B194A3 /* CashInViewController.swift */,
+			);
+			path = CashIn;
+			sourceTree = "<group>";
+		};
+		23A3D14A28A3A4B100B194A3 /* CashInConfirm */ = {
+			isa = PBXGroup;
+			children = (
+				23A3D15028A3A50300B194A3 /* CashInConfirm.storyboard */,
+				23A3D15828A3A53D00B194A3 /* CashInConfirmViewController.swift */,
+			);
+			path = CashInConfirm;
+			sourceTree = "<group>";
+		};
+		23A3D14B28A3A4C400B194A3 /* CashInSuccess */ = {
+			isa = PBXGroup;
+			children = (
+				23A3D15228A3A50F00B194A3 /* CashInSuccess.storyboard */,
+				23A3D15A28A3A54700B194A3 /* CashInSuccessViewController.swift */,
+			);
+			path = CashInSuccess;
+			sourceTree = "<group>";
+		};
+		23E40EC529AC8D310014A3AD /* QRPay */ = {
+			isa = PBXGroup;
+			children = (
+				23E40ECA29AC8DDC0014A3AD /* QRPayViewController.swift */,
+			);
+			path = QRPay;
+			sourceTree = "<group>";
+		};
+		23E40EC629AC8D450014A3AD /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				23E40ECC29AC8DE30014A3AD /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		23E40EC729AC8D520014A3AD /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				23E40EC829AC8DC40014A3AD /* TransactionsViewController.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		23A3D12028A3923200B194A3 /* Coordinator_v2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23A3D13528A3923400B194A3 /* Build configuration list for PBXNativeTarget "Coordinator_v2" */;
+			buildPhases = (
+				23A3D11D28A3923200B194A3 /* Sources */,
+				23A3D11E28A3923200B194A3 /* Frameworks */,
+				23A3D11F28A3923200B194A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Coordinator_v2;
+			productName = Coordinator_v2;
+			productReference = 23A3D12128A3923200B194A3 /* Coordinator_v2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		23A3D11928A3923200B194A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					23A3D12028A3923200B194A3 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 23A3D11C28A3923200B194A3 /* Build configuration list for PBXProject "Coordinator_v2" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 23A3D11828A3923200B194A3;
+			productRefGroup = 23A3D12228A3923200B194A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23A3D12028A3923200B194A3 /* Coordinator_v2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		23A3D11F28A3923200B194A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23A3D14128A39A4D00B194A3 /* SignIn.storyboard in Resources */,
+				23A3D14D28A3A4EF00B194A3 /* Dashboard.storyboard in Resources */,
+				23A3D15128A3A50300B194A3 /* CashInConfirm.storyboard in Resources */,
+				23A3D13128A3923400B194A3 /* LaunchScreen.storyboard in Resources */,
+				23A3D12E28A3923400B194A3 /* Assets.xcassets in Resources */,
+				23A3D14F28A3A4FA00B194A3 /* CashIn.storyboard in Resources */,
+				23A3D15328A3A50F00B194A3 /* CashInSuccess.storyboard in Resources */,
+				23A3D12C28A3923200B194A3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23A3D11D28A3923200B194A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23A3D13E28A3941300B194A3 /* StoryBoarded.swift in Sources */,
+				23E40ECF29AC8E150014A3AD /* TransactionsCoordinator.swift in Sources */,
+				23A3D16328A3BB3C00B194A3 /* CashInSuccessCoordinator.swift in Sources */,
+				23A3D15D28A3A73200B194A3 /* DashboardCoordinator.swift in Sources */,
+				23E40ED329AC8E3A0014A3AD /* SettingsCoordinator.swift in Sources */,
+				23A3D12928A3923200B194A3 /* ViewController.swift in Sources */,
+				23E40ED629AC8F4F0014A3AD /* BaseTabBarController.swift in Sources */,
+				23A3D15F28A3A9FF00B194A3 /* CashInCoordinator.swift in Sources */,
+				23A3D14328A39A5A00B194A3 /* SignInViewController.swift in Sources */,
+				23E40EC929AC8DC40014A3AD /* TransactionsViewController.swift in Sources */,
+				23E40ECB29AC8DDC0014A3AD /* QRPayViewController.swift in Sources */,
+				23A3D15728A3A53000B194A3 /* CashInViewController.swift in Sources */,
+				23A3D13C28A3929300B194A3 /* MainCoordinator.swift in Sources */,
+				2392CBAB28A42BD100A5B8A7 /* BaseNavigationController.swift in Sources */,
+				23A3D15B28A3A54700B194A3 /* CashInSuccessViewController.swift in Sources */,
+				23A3D15928A3A53D00B194A3 /* CashInConfirmViewController.swift in Sources */,
+				23E40ED829AC92C40014A3AD /* SignInCoordinator.swift in Sources */,
+				23A3D12528A3923200B194A3 /* AppDelegate.swift in Sources */,
+				23A3D13A28A3928B00B194A3 /* Coordinator.swift in Sources */,
+				23A3D15528A3A52600B194A3 /* DashboardViewController.swift in Sources */,
+				23A3D16128A3AA4500B194A3 /* CashInConfirmCoordinator.swift in Sources */,
+				23E40ED129AC8E1C0014A3AD /* QRPayCoordinator.swift in Sources */,
+				23E40ECD29AC8DE30014A3AD /* SettingsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		23A3D12A28A3923200B194A3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23A3D12B28A3923200B194A3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		23A3D12F28A3923400B194A3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23A3D13028A3923400B194A3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		23A3D13328A3923400B194A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		23A3D13428A3923400B194A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		23A3D13628A3923400B194A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Z2FQ8D579;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Coordinator_v2/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.designpattern.Coordinator-v2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		23A3D13728A3923400B194A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Z2FQ8D579;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Coordinator_v2/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.designpattern.Coordinator-v2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23A3D11C28A3923200B194A3 /* Build configuration list for PBXProject "Coordinator_v2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23A3D13328A3923400B194A3 /* Debug */,
+				23A3D13428A3923400B194A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23A3D13528A3923400B194A3 /* Build configuration list for PBXNativeTarget "Coordinator_v2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23A3D13628A3923400B194A3 /* Debug */,
+				23A3D13728A3923400B194A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 23A3D11928A3923200B194A3 /* Project object */;
+}
