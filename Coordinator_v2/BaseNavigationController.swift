@@ -13,7 +13,24 @@ class BaseNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
-        self.navigationBar.prefersLargeTitles = true
+        navigationBarAppearance()
+    }
+    
+    private func navigationBarAppearance() {
+        //MARK: - Global Navigation Appearance
+        if #available(iOS 13.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = .systemRed
+            appearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+            UINavigationBar.appearance().standardAppearance = appearance
+        } else {
+            // Fallback on earlier versions
+        }
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().prefersLargeTitles = false
     }
     
 }
@@ -69,8 +86,13 @@ extension BaseNavigationController: UINavigationControllerDelegate {
             debugPrint("\(#function)Cashin Success child Coordinator counts --->", cashinSuccessViewController.coordinator?.childCoordinators.count as Any)
             cashinSuccessViewController.coordinator?.childDidFinish()
         }
+//        if let baseTabBarViewController = fromViewController as? BaseTabBarController {
+//            debugPrint("\(#function)Settings Success child Coordinator counts --->", baseTabBarViewController.settingsCoordinator.childCoordinators.count as Any)
+//            baseTabBarViewController.settingsCoordinator.childDidFinish()
+//        }
         debugPrint("\(#function)NavigationController Counts --->", navigationController.viewControllers.count)
     }
+    
 
 }
 
@@ -153,3 +175,4 @@ extension UIViewController {
 }
 
 */
+

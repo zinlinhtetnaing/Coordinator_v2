@@ -30,6 +30,8 @@
 		23A3D15F28A3A9FF00B194A3 /* CashInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3D15E28A3A9FF00B194A3 /* CashInCoordinator.swift */; };
 		23A3D16128A3AA4500B194A3 /* CashInConfirmCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3D16028A3AA4500B194A3 /* CashInConfirmCoordinator.swift */; };
 		23A3D16328A3BB3C00B194A3 /* CashInSuccessCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3D16228A3BB3C00B194A3 /* CashInSuccessCoordinator.swift */; };
+		23DFF79A29AEFBDB00624B04 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFF79929AEFBDB00624B04 /* Router.swift */; };
+		23DFF79C29AEFC0600624B04 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFF79B29AEFC0600624B04 /* Transition.swift */; };
 		23E40EC929AC8DC40014A3AD /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E40EC829AC8DC40014A3AD /* TransactionsViewController.swift */; };
 		23E40ECB29AC8DDC0014A3AD /* QRPayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E40ECA29AC8DDC0014A3AD /* QRPayViewController.swift */; };
 		23E40ECD29AC8DE30014A3AD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E40ECC29AC8DE30014A3AD /* SettingsViewController.swift */; };
@@ -66,6 +68,8 @@
 		23A3D15E28A3A9FF00B194A3 /* CashInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashInCoordinator.swift; sourceTree = "<group>"; };
 		23A3D16028A3AA4500B194A3 /* CashInConfirmCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashInConfirmCoordinator.swift; sourceTree = "<group>"; };
 		23A3D16228A3BB3C00B194A3 /* CashInSuccessCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashInSuccessCoordinator.swift; sourceTree = "<group>"; };
+		23DFF79929AEFBDB00624B04 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		23DFF79B29AEFC0600624B04 /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		23E40EC829AC8DC40014A3AD /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		23E40ECA29AC8DDC0014A3AD /* QRPayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRPayViewController.swift; sourceTree = "<group>"; };
 		23E40ECC29AC8DE30014A3AD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 		23A3D13828A3927A00B194A3 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				23DFF79929AEFBDB00624B04 /* Router.swift */,
+				23DFF79B29AEFC0600624B04 /* Transition.swift */,
 				23A3D13928A3928B00B194A3 /* Coordinator.swift */,
 				23A3D13B28A3929300B194A3 /* MainCoordinator.swift */,
 				23A3D13F28A396AA00B194A3 /* ChildCoordinator */,
@@ -316,12 +322,14 @@
 				23A3D15F28A3A9FF00B194A3 /* CashInCoordinator.swift in Sources */,
 				23A3D14328A39A5A00B194A3 /* SignInViewController.swift in Sources */,
 				23E40EC929AC8DC40014A3AD /* TransactionsViewController.swift in Sources */,
+				23DFF79C29AEFC0600624B04 /* Transition.swift in Sources */,
 				23E40ECB29AC8DDC0014A3AD /* QRPayViewController.swift in Sources */,
 				23A3D15728A3A53000B194A3 /* CashInViewController.swift in Sources */,
 				23A3D13C28A3929300B194A3 /* MainCoordinator.swift in Sources */,
 				2392CBAB28A42BD100A5B8A7 /* BaseNavigationController.swift in Sources */,
 				23A3D15B28A3A54700B194A3 /* CashInSuccessViewController.swift in Sources */,
 				23A3D15928A3A53D00B194A3 /* CashInConfirmViewController.swift in Sources */,
+				23DFF79A29AEFBDB00624B04 /* Router.swift in Sources */,
 				23E40ED829AC92C40014A3AD /* SignInCoordinator.swift in Sources */,
 				23A3D12528A3923200B194A3 /* AppDelegate.swift in Sources */,
 				23A3D13A28A3928B00B194A3 /* Coordinator.swift in Sources */,

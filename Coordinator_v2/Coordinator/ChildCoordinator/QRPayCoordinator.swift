@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class QRPayCoordinator: Coordinator {
+class QRPayCoordinator: BaseRouter, Coordinator {
     
     weak var parentCoordinator: MainCoordinator?
     
@@ -18,6 +18,7 @@ class QRPayCoordinator: Coordinator {
     
     init(_ navigationController: BaseNavigationController) {
         self.navigationController = navigationController
+        super.init()
     }
     
     func start() {
@@ -25,7 +26,8 @@ class QRPayCoordinator: Coordinator {
         let vc = QRPayViewController()
         vc.coordinator = self
         vc.modalPresentationStyle = .fullScreen
-        navigationController.pushViewController(vc, animated: true)
+//        transition(.push(scene: vc, animated: true))
+         navigationController.pushViewController(vc, animated: true)
     }
     
 }

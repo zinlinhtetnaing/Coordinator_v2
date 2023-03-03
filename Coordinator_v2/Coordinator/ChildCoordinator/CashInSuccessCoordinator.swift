@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class CashInSuccessCoordinator: Coordinator {
+class CashInSuccessCoordinator: BaseRouter, Coordinator {
     
     weak var parentCoordinator: CashInConfirmCoordinator?
     
@@ -18,13 +18,15 @@ class CashInSuccessCoordinator: Coordinator {
     
     init(_ navigationController: BaseNavigationController) {
         self.navigationController = navigationController
+        super.init()
     }
     
     func start() {
         debugPrint("CashIn Success Coordinator Start")
         let vc = CashInSuccessViewController.instatiate(storyboard: .cashInSuccess)
         vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
+        transition(.push(scene: vc, animated: true))
+        /// navigationController.pushViewController(vc, animated: true)
     }
     
 }
@@ -32,8 +34,17 @@ class CashInSuccessCoordinator: Coordinator {
 
 extension CashInSuccessCoordinator {
     
+    func popToCashInView() {
+        for vc in navigationController.viewControllers {
+            if let cashInVc = vc as? CashInViewController {
+                cashInVc.coordinator?.childCoordinators.removeAll()
+                transition(.popTo(scene: cashInVc, animated: true))
+            }
+        }
+    }
+    
     func popToRootView() {
-        navigationController.popToRootViewController(animated: true)
+        transition(.popToRoot(animated: true))
     }
   
 }
