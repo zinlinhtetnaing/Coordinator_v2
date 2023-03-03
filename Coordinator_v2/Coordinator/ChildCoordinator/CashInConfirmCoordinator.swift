@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class CashInConfirmCoordinator: Coordinator {
+class CashInConfirmCoordinator: BaseRouter, Coordinator {
     
     weak var parentCoordinator: CashInCoordinator?
     
@@ -18,13 +18,15 @@ class CashInConfirmCoordinator: Coordinator {
     
     init(_ navigationController: BaseNavigationController) {
         self.navigationController = navigationController
+        super.init()
     }
     
     func start() {
         debugPrint("CashIn Confirm Coordinator Start")
         let vc = CashInConfirmViewController.instatiate(storyboard: .cashinConfirm)
         vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
+        transition(.push(scene: vc, animated: true))
+//        navigationController.pushViewController(vc, animated: true)
     }
     
 }
@@ -40,7 +42,7 @@ extension CashInConfirmCoordinator {
     }
     
     func backToCashIn() {
-        navigationController.popViewController(animated: true)
+        transition(.pop(animated: true))
     }
     
 }

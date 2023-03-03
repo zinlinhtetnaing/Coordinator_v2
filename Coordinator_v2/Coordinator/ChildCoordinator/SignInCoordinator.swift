@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class SignInCoordinator: Coordinator {
+class SignInCoordinator: BaseRouter, Coordinator {
     
     weak var parentCoordinator: MainCoordinator?
     
@@ -18,19 +18,22 @@ class SignInCoordinator: Coordinator {
     
     init(_ navigationController: BaseNavigationController) {
         self.navigationController = navigationController
+        super.init()
     }
     
     func start() {
         debugPrint("SignIn Coordinator Start")
         let vc = SignInViewController.instatiate(storyboard: .signIn)
-        let nav = BaseNavigationController(rootViewController: vc)
+//        let nav = BaseNavigationController(rootViewController: vc)
         vc.coordinator = self
         if #available(iOS 13.0, *) {
             vc.isModalInPresentation = true
         } else {
             // Fallback on earlier versions
         }
-        navigationController.present(nav, animated: true)
+        /// vc.modalPresentationStyle = .fullScreen
+        /// navigationController.present(vc, animated: true)
+        transition(.modal(scene: vc, animated: true))
     }
     
 }
@@ -41,12 +44,12 @@ extension SignInCoordinator {
         navigationController.dismiss(animated: true) {
             let base = BaseTabBarController()
             base.modalPresentationStyle = .fullScreen
-            self.navigationController.present(base, animated: true)
+            self.transition(.modal(scene: base, animated: true))
         }
     }
     
     func dismiss() {
-        navigationController.dismiss(animated: true, completion: nil)
+        transition(.dismiss(animated: true))
     }
     
 }

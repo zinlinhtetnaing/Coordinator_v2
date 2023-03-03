@@ -17,13 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Override point for customization after application launch.
         
+       
+        
         let navigationController = BaseNavigationController()
-        coordinator = MainCoordinator(navigationController)
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = navigationController /// MaiBaseTabBarViewController()
-        window?.makeKeyAndVisible()
+        window?.rootViewController = navigationController /// BaseTabBarViewController()
+       
+        coordinator = MainCoordinator(window?.rootViewController as! BaseNavigationController)
         coordinator?.start()
         
+        window?.makeKeyAndVisible()
+    
         return true
         
     }

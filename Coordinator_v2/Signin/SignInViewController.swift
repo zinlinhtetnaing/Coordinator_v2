@@ -17,6 +17,7 @@ class SignInViewController: UIViewController, Storyboarded {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        debugPrint(self.navigationController?.viewControllers)
     }
     
     @IBAction func gotoDashboardBtnAction(_ sender: UIButton) {

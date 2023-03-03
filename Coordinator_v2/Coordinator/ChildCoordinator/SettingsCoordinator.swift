@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class SettingsCoordinator: Coordinator {
+class SettingsCoordinator: BaseRouter, Coordinator {
     
     weak var parentCoordinator: MainCoordinator?
     
@@ -18,6 +18,7 @@ class SettingsCoordinator: Coordinator {
     
     init(_ navigationController: BaseNavigationController) {
         self.navigationController = navigationController
+        super.init()
     }
     
     func start() {
@@ -25,11 +26,23 @@ class SettingsCoordinator: Coordinator {
         let vc = SettingsViewController()
         vc.coordinator = self
         vc.modalPresentationStyle = .fullScreen
+//        transition(.push(scene: vc, animated: true))
         navigationController.pushViewController(vc, animated: true)
     }
     
 }
 
 extension SettingsCoordinator {
-
+    
+    func logout() {
+        let child = SignInCoordinator(self.navigationController)
+        child.childDidFinish()
+        childCoordinators.append(child)
+        child.start()
+    }
+    
+    func alertBox() {
+//        self.showAlert(withTitle: "Logout", withMessage: "You want to logut?")
+        
+    }
 }

@@ -16,6 +16,7 @@ class DashboardViewController: UIViewController, Storyboarded {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        debugPrint("ViewController Stacks: \(self.navigationController?.viewControllers.count as Any)")
         super.viewWillAppear(animated)
     }
     
