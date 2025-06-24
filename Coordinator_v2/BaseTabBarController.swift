@@ -10,7 +10,7 @@ import UIKit
 class BaseTabBarController: UITabBarController {
     
     lazy var dashboardCoordinator = DashboardCoordinator(BaseNavigationController())
-    lazy var qrCoordinator = QRPayCoordinator(BaseNavigationController())
+    lazy var qrCoordinator = CashInCoordinator(BaseNavigationController())
     lazy var transactionsCoordinator = TransactionsCoordinator(BaseNavigationController())
     lazy var settingsCoordinator = SettingsCoordinator(BaseNavigationController())
 

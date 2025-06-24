@@ -18,15 +18,16 @@ class DashboardCoordinator: BaseRouter, Coordinator {
     
     init(_ navigationController: BaseNavigationController) {
         self.navigationController = navigationController
-        super.init()
+        super.init(rootController: navigationController)
     }
     
     func start() {
         let vc = DashboardViewController.instatiate(storyboard: .dashboard)
         vc.coordinator = self
         vc.modalPresentationStyle = .fullScreen
+        transition(.push(scene: vc, animated: false))
 //        transition(.push(scene: vc, animated: false))
-        navigationController.pushViewController(vc, animated: true)
+//        navigationController.pushViewController(vc, animated: true)//
         /*
          vc.navigationController?.navigationItem.hidesBackButton = true
          navigationController.dismiss(animated: true) {
@@ -47,6 +48,12 @@ extension DashboardCoordinator {
         childCoordinators.append(child)
         debugPrint("Dashboard child count", childCoordinators.count)
         child.start()
+    }
+    
+    func showInfoBottomSheet() {
+        let infoBottomSheetVC = InfoBottomSheet(String(describing: InfoBottomSheet.self))
+        infoBottomSheetVC.preferredSheetSizing = .medium
+        transition(.modal(scene: infoBottomSheetVC, animated: false))
     }
     
 }

@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import resource_spm
 
 class SignInCoordinator: BaseRouter, Coordinator {
     
@@ -18,7 +19,7 @@ class SignInCoordinator: BaseRouter, Coordinator {
     
     init(_ navigationController: BaseNavigationController) {
         self.navigationController = navigationController
-        super.init()
+        super.init(rootController: navigationController)
     }
     
     func start() {
@@ -52,4 +53,17 @@ extension SignInCoordinator {
         transition(.dismiss(animated: true))
     }
     
+}
+
+
+extension UIView {
+    func setGradient() {
+        let gradient: CAGradientLayer = CAGradientLayer()
+        gradient.colors = [(UIColor(red: 255/255, green: 171/255, blue: 171/255, alpha: 0).cgColor), (UIColor(red: 255/255, green: 171/255, blue: 171/255, alpha: 1.00).cgColor)].map { $0 }
+        gradient.startPoint = CGPoint(x : 1.0, y : 1.0)
+        gradient.endPoint = CGPoint(x :1.0, y: 0.0)
+        gradient.locations = [0.1, 1.0]
+        gradient.frame = self.bounds
+        self.layer.insertSublayer(gradient, at: 0)
+    }
 }

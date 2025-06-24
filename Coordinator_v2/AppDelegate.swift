@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Override point for customization after application launch.
         
-       
+        if let uuid = UIDevice.current.identifierForVendor?.uuidString{
+            debugPrint("DeviceID", uuid)
+//            "4682E50C-B56E-4A56-A549-410064C91336"
+//            "E032F701-7BF6-4871-8C0E-D3ED32B85631"
+        }
+        
+        IQKeyboardManager.shared.enable = true
         
         let navigationController = BaseNavigationController()
         window = UIWindow(frame: UIScreen.main.bounds)

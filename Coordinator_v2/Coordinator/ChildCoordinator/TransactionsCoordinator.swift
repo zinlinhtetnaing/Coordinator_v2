@@ -18,7 +18,7 @@ class TransactionsCoordinator: BaseRouter, Coordinator {
     
     init(_ navigationController: BaseNavigationController) {
         self.navigationController = navigationController
-        super.init()
+        super.init(rootController: navigationController)
     }
     
     func start() {
@@ -26,8 +26,8 @@ class TransactionsCoordinator: BaseRouter, Coordinator {
         let vc = TransactionsViewController()
         vc.coordinator = self
         vc.modalPresentationStyle = .fullScreen
-//        transition(.push(scene: vc, animated: true))
-        navigationController.pushViewController(vc, animated: true)
+        transition(.push(scene: vc, animated: true))
+//        navigationController.pushViewController(vc, animated: true)
     }
     
 }

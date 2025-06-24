@@ -22,15 +22,17 @@ public protocol BaseRouterProtocol {
 
 public class BaseRouter: BaseRouterProtocol {
 
-    let window: UIWindow
-
-    public init() {
+    var window: UIWindow {
         let bounds = UIScreen.main.bounds
-        window = UIWindow.init(frame: bounds)
+        return UIWindow.init(frame: bounds)
     }
-
-    public init(window: UIWindow) {
-        self.window = window
+    
+    private weak var rootController: UINavigationController?
+    private var completions: [UIViewController : () -> Void]
+    
+    init(rootController: UINavigationController) {
+        self.rootController = rootController
+        completions = [:]
     }
 
     public var isOnMain: Bool {
@@ -160,55 +162,13 @@ public class BaseRouter: BaseRouterProtocol {
 
             break
         case .modal(let scene, let animated):
-
-            guard let topViewController = UIViewController.topViewController() else {
-                return
-            }
-            topViewController.present(scene, animated: animated)
-
+            rootController?.present(scene, animated: animated)
             break
         case .push(let scene, let animated):
-
-            guard let topViewController = UIViewController.topViewController() else {
-                return
-            }
-
-            guard let navigationController = topViewController.navigationController as? BaseNavigationController else {
-                return
-            }
-
-            navigationController.pushViewController(scene, animated: animated)
-
+            rootController?.pushViewController(scene, animated: animated)
             break
         case .dismiss(let animated, let completion):
-
-            guard let topViewController = UIViewController.topViewController() else {
-                fatalError("top view controller not found")
-            }
-
-            if let tabBarController = topViewController.navigationController?.tabBarController {
-                tabBarController.dismiss(animated: animated) {
-                    guard let completion = completion else {
-                        return
-                    }
-                    completion()
-                }
-            } else if let navigationController = topViewController.navigationController {
-                navigationController.dismiss(animated: animated) {
-                    guard let completion = completion else {
-                        return
-                    }
-                    completion()
-                }
-            } else {
-                topViewController.dismiss(animated: animated) {
-                    guard let completion = completion else {
-                        return
-                    }
-                    completion()
-                }
-            }
-
+            rootController?.dismiss(animated: animated, completion: completion)
             break
         case .dismissToRoot(let animated):
 

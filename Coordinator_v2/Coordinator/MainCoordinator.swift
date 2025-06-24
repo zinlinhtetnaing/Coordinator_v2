@@ -16,12 +16,13 @@ class MainCoordinator: BaseRouter, Coordinator {
     
     init(_ navigationController: BaseNavigationController) {
         self.navigationController = navigationController
-        super.init()
+        super.init(rootController: navigationController)
     }
     
     func start() {
         let vc = ViewController.instatiate(storyboard: .main)
         vc.coordinator = self
+        
 //        transition(.modal(scene: vc, animated: false))
 //        transition(.push(scene: vc, animated: false))
         self.navigationController.viewControllers = [vc]

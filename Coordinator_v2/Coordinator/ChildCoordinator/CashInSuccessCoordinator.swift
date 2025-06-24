@@ -18,7 +18,7 @@ class CashInSuccessCoordinator: BaseRouter, Coordinator {
     
     init(_ navigationController: BaseNavigationController) {
         self.navigationController = navigationController
-        super.init()
+        super.init(rootController: navigationController)
     }
     
     func start() {

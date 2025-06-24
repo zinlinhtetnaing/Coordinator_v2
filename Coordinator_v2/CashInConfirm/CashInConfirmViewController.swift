@@ -13,6 +13,8 @@ class CashInConfirmViewController: UIViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //nextcashinscreen
+        
     }
   
     @IBAction func cashinSuccessBtnAction(_ sender: UIButton) {

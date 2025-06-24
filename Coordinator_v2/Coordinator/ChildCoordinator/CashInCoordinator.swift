@@ -18,7 +18,7 @@ class CashInCoordinator: BaseRouter, Coordinator {
     
     init(_ navigationController: BaseNavigationController) {
         self.navigationController = navigationController
-        super.init()
+        super.init(rootController: navigationController)
     }
     
     func start() {
@@ -26,7 +26,6 @@ class CashInCoordinator: BaseRouter, Coordinator {
         let vc = CashInViewController.instatiate(storyboard: .cashIn)
         vc.coordinator = self
         vc.modalPresentationStyle = .fullScreen
-        vc.hidesBottomBarWhenPushed = true
         transition(.push(scene: vc, animated: true))
         /// navigationController.pushViewController(vc, animated: true)
     }
