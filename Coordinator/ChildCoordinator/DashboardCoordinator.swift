@@ -1,0 +1,59 @@
+//
+//  DashboardCoordinator.swift
+//  Coordinator_v2
+//
+//  Created by Zin Lin Htet Naing on 10/08/2022.
+//
+
+import Foundation
+import UIKit
+
+class DashboardCoordinator: BaseRouter, Coordinator {
+    
+    weak var parentCoordinator: SignInCoordinator?
+    
+    var childCoordinators = [Coordinator]()
+    
+    var navigationController: BaseNavigationController
+    
+    init(_ navigationController: BaseNavigationController) {
+        self.navigationController = navigationController
+        super.init(rootController: navigationController)
+    }
+    
+    func start() {
+        let vc = DashboardViewController.instatiate(storyboard: .dashboard)
+        vc.coordinator = self
+        vc.modalPresentationStyle = .fullScreen
+        transition(.push(scene: vc, animated: false))
+//        transition(.push(scene: vc, animated: false))
+//        navigationController.pushViewController(vc, animated: true)//
+        /*
+         vc.navigationController?.navigationItem.hidesBackButton = true
+         navigationController.dismiss(animated: true) {
+         self.navigationController.setViewControllers([vc], animated: true)
+         self.navigationController.pushViewController(vc, animated: true)
+         }
+         */
+    }
+    
+}
+
+extension DashboardCoordinator {
+   
+    func navigateToCashIn() {
+        let child = CashInCoordinator(navigationController)
+        child.parentCoordinator = self
+        childCoordinators.removeAll()
+        childCoordinators.append(child)
+        debugPrint("Dashboard child count", childCoordinators.count)
+        child.start()
+    }
+    
+    func showInfoBottomSheet() {
+        let infoBottomSheetVC = InfoBottomSheet(String(describing: InfoBottomSheet.self))
+        infoBottomSheetVC.preferredSheetSizing = .medium
+        transition(.modal(scene: infoBottomSheetVC, animated: false))
+    }
+    
+}
