@@ -19,6 +19,7 @@
 		2388E1772CA3F0D100A4E763 /* DropDownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E1712CA3F0D100A4E763 /* DropDownTextField.swift */; };
 		2388E1782CA3F0D100A4E763 /* XSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2388E1722CA3F0D100A4E763 /* XSecureTextField.swift */; };
 		2392CBAB28A42BD100A5B8A7 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2392CBAA28A42BD100A5B8A7 /* BaseNavigationController.swift */; };
+		23A12D812D719D4800CDFC52 /* TestCopilot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A12D802D719D4800CDFC52 /* TestCopilot.swift */; };
 		23A3D12528A3923200B194A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3D12428A3923200B194A3 /* AppDelegate.swift */; };
 		23A3D12928A3923200B194A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3D12828A3923200B194A3 /* ViewController.swift */; };
 		23A3D12C28A3923200B194A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A3D12A28A3923200B194A3 /* Main.storyboard */; };
@@ -85,6 +86,7 @@
 		2388E1712CA3F0D100A4E763 /* DropDownTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownTextField.swift; sourceTree = "<group>"; };
 		2388E1722CA3F0D100A4E763 /* XSecureTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XSecureTextField.swift; sourceTree = "<group>"; };
 		2392CBAA28A42BD100A5B8A7 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		23A12D802D719D4800CDFC52 /* TestCopilot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCopilot.swift; sourceTree = "<group>"; };
 		23A3D12128A3923200B194A3 /* Coordinator_v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coordinator_v2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A3D12428A3923200B194A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23A3D12828A3923200B194A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 			children = (
 				23A3D15028A3A50300B194A3 /* CashInConfirm.storyboard */,
 				23A3D15828A3A53D00B194A3 /* CashInConfirmViewController.swift */,
+				23A12D802D719D4800CDFC52 /* TestCopilot.swift */,
 			);
 			path = CashInConfirm;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				23A3D12528A3923200B194A3 /* AppDelegate.swift in Sources */,
 				23A3D13A28A3928B00B194A3 /* Coordinator.swift in Sources */,
 				23A3D15528A3A52600B194A3 /* DashboardViewController.swift in Sources */,
+				23A12D812D719D4800CDFC52 /* TestCopilot.swift in Sources */,
 				23F6881F2B90E21200D18D23 /* TransactionTableViewCell.swift in Sources */,
 				23D9D26A29C2CC1800B8B88B /* SheetViewController.swift in Sources */,
 				23A3D16128A3AA4500B194A3 /* CashInConfirmCoordinator.swift in Sources */,
@@ -790,7 +794,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3Z2FQ8D579;
+				DEVELOPMENT_TEAM = 8BRK374QM7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Coordinator_v2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
