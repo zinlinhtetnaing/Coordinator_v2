@@ -19,4 +19,8 @@ class CashInSuccessViewController: UIViewController, Storyboarded {
         coordinator?.popToRootView()
     }
     
+    @IBAction func backToCashInBtnAction(_ sender: Any) {
+        coordinator?.popToCashInView()
+    }
+    
 }

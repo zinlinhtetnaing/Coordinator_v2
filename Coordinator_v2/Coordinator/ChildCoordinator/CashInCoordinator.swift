@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class CashInCoordinator: Coordinator {
+class CashInCoordinator: BaseRouter, Coordinator {
     
     weak var parentCoordinator: DashboardCoordinator?
     
@@ -18,6 +18,7 @@ class CashInCoordinator: Coordinator {
     
     init(_ navigationController: BaseNavigationController) {
         self.navigationController = navigationController
+        super.init(rootController: navigationController)
     }
     
     func start() {
@@ -25,8 +26,8 @@ class CashInCoordinator: Coordinator {
         let vc = CashInViewController.instatiate(storyboard: .cashIn)
         vc.coordinator = self
         vc.modalPresentationStyle = .fullScreen
-        vc.hidesBottomBarWhenPushed = true
-        navigationController.pushViewController(vc, animated: true)
+        transition(.push(scene: vc, animated: true))
+        /// navigationController.pushViewController(vc, animated: true)
     }
     
 }
@@ -37,7 +38,7 @@ extension CashInCoordinator {
         let child = CashInConfirmCoordinator(navigationController)
         child.parentCoordinator = self
         childCoordinators.append(child)
-        debugPrint("Cashin child count", childCoordinators.count)
+        debugPrint("Cashin child count", childCoordinators.count, childCoordinators)
         child.start()
     }
     

@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "iqkeyboardmanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hackiftekhar/IQKeyboardManager.git",
+      "state" : {
+        "revision" : "aa656e1f0d95f0154622f453599318602848be3b",
+        "version" : "7.0.1"
+      }
+    },
+    {
+      "identity" : "xbiometriclocalauthentication",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/zinlinhtetnaing/XBiometricLocalAuthentication.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "40cc48abb56f7107f0bf42d8d418068de27666d5"
+      }
+    },
+    {
+      "identity" : "xkeychainservice",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/zinlinhtetnaing/XKeychainService.git",
+      "state" : {
+        "revision" : "0be0f7659e4da896980e018f8f04728be984e96e",
+        "version" : "1.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}

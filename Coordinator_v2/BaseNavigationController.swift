@@ -13,7 +13,24 @@ class BaseNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
-        self.navigationBar.prefersLargeTitles = true
+        navigationBarAppearance()
+    }
+    
+    private func navigationBarAppearance() {
+        //MARK: - Global Navigation Appearance
+        if #available(iOS 13.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = .systemRed
+            appearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+            UINavigationBar.appearance().standardAppearance = appearance
+        } else {
+            // Fallback on earlier versions
+        }
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().prefersLargeTitles = false
     }
     
 }
@@ -24,7 +41,7 @@ extension BaseNavigationController: UINavigationControllerDelegate {
         switch viewController {
         case is DashboardViewController:
             viewController.title = "Home"
-            viewController.view.backgroundColor = .white
+//            viewController.view.backgroundColor = .white
         case is CashInViewController:
             viewController.title = "CashIn"
         case is CashInConfirmViewController:
@@ -35,13 +52,13 @@ extension BaseNavigationController: UINavigationControllerDelegate {
             viewController.title = "Signin"
         case is QRPayViewController:
             viewController.title = "QR Pay"
-            viewController.view.backgroundColor = .white
+//            viewController.view.backgroundColor = .white
         case is TransactionsViewController:
             viewController.title = "Transactions"
-            viewController.view.backgroundColor = .white
+//            viewController.view.backgroundColor = .white
         case is SettingsViewController:
             viewController.title = "Settings"
-            viewController.view.backgroundColor = .white
+//            viewController.view.backgroundColor = .white
         default:
             viewController.title = "Landing"
         }
@@ -69,8 +86,24 @@ extension BaseNavigationController: UINavigationControllerDelegate {
             debugPrint("\(#function)Cashin Success child Coordinator counts --->", cashinSuccessViewController.coordinator?.childCoordinators.count as Any)
             cashinSuccessViewController.coordinator?.childDidFinish()
         }
+//        if let baseTabBarViewController = fromViewController as? BaseTabBarController {
+//            debugPrint("\(#function)Settings Success child Coordinator counts --->", baseTabBarViewController.settingsCoordinator.childCoordinators.count as Any)
+//            baseTabBarViewController.settingsCoordinator.childDidFinish()
+//        }
         debugPrint("\(#function)NavigationController Counts --->", navigationController.viewControllers.count)
     }
+    
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        debugPrint(fromVC, toVC)
+        if fromVC is DashboardViewController && toVC is CashInViewController {
+            toVC.hidesBottomBarWhenPushed = true
+        }
+//        else if fromVC is CashInViewController && toVC is DashboardViewController {
+//            self.hidesBottomBarWhenPushed = true
+//        }
+        return nil
+    }
+    
 
 }
 
@@ -153,3 +186,4 @@ extension UIViewController {
 }
 
 */
+

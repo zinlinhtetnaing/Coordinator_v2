@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class TransactionsCoordinator: Coordinator {
+class TransactionsCoordinator: BaseRouter, Coordinator {
     
     weak var parentCoordinator: MainCoordinator?
     
@@ -18,14 +18,16 @@ class TransactionsCoordinator: Coordinator {
     
     init(_ navigationController: BaseNavigationController) {
         self.navigationController = navigationController
+        super.init(rootController: navigationController)
     }
     
     func start() {
-        debugPrint("Dashboard Coordinator Start")
+        debugPrint("Transaction Coordinator Start")
         let vc = TransactionsViewController()
         vc.coordinator = self
         vc.modalPresentationStyle = .fullScreen
-        navigationController.pushViewController(vc, animated: true)
+        transition(.push(scene: vc, animated: true))
+//        navigationController.pushViewController(vc, animated: true)
     }
     
 }

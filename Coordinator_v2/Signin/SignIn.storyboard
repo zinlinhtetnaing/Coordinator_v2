@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,11 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dk1-Gx-35R">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dk1-Gx-35R" propertyAccessControl="all">
                                 <rect key="frame" x="45" y="426" width="324" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="dop-A5-y4M"/>
                                 </constraints>
+                                <color key="tintColor" systemColor="linkColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Go To Dashboard"/>
                                 <connections>
@@ -39,19 +40,32 @@
                                     <action selector="backToSplashBtnAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="K1v-GK-Mga"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NIH-5J-oFO">
+                                <rect key="frame" x="87" y="221" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="6NY-aL-W7G"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="epq-P6-1Zv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="45" id="33x-HB-wYM"/>
                             <constraint firstItem="dk1-Gx-35R" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="45" id="3yk-J0-CvF"/>
+                            <constraint firstItem="NIH-5J-oFO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="87" id="5mB-pa-38n"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dk1-Gx-35R" secondAttribute="trailing" constant="45" id="94m-fz-1dV"/>
                             <constraint firstItem="dk1-Gx-35R" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="GuD-MF-bJS"/>
+                            <constraint firstItem="NIH-5J-oFO" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="JiH-g1-R0y"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="epq-P6-1Zv" secondAttribute="trailing" constant="45" id="Od4-jc-Ama"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NIH-5J-oFO" secondAttribute="trailing" constant="87" id="jYL-F9-eIY"/>
                             <constraint firstItem="epq-P6-1Zv" firstAttribute="top" secondItem="dk1-Gx-35R" secondAttribute="bottom" constant="40" id="mIo-dp-OH5"/>
+                            <constraint firstItem="dk1-Gx-35R" firstAttribute="top" secondItem="NIH-5J-oFO" secondAttribute="bottom" constant="77" id="orH-Bt-U4Q"/>
                             <constraint firstItem="dk1-Gx-35R" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="zSD-hA-nMG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resourcesImage" destination="NIH-5J-oFO" id="Xwy-iZ-Ndb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,6 +73,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

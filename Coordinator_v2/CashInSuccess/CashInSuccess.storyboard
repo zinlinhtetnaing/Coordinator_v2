@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,28 +17,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jqv-bM-c5x">
-                                <rect key="frame" x="45" y="426" width="324" height="44"/>
-                                <color key="backgroundColor" systemColor="linkColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="xte-7q-Ih6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Go To Dashboard"/>
-                                <connections>
-                                    <action selector="gotoDashboardBtnAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DN9-3l-iU2"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bEH-Xn-7yq">
+                                <rect key="frame" x="40" y="394" width="334" height="108"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jqv-bM-c5x">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="44"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="xte-7q-Ih6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Go To Dashboard"/>
+                                        <connections>
+                                            <action selector="gotoDashboardBtnAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DN9-3l-iU2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32F-Om-lv3">
+                                        <rect key="frame" x="0.0" y="64" width="334" height="44"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="dbw-iv-CgR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Back to CashIn"/>
+                                        <connections>
+                                            <action selector="backToCashInBtnAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="u4X-VF-WPp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Jqv-bM-c5x" secondAttribute="trailing" constant="45" id="1Wi-ZZ-EA4"/>
-                            <constraint firstItem="Jqv-bM-c5x" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Gbh-C1-aQW"/>
-                            <constraint firstItem="Jqv-bM-c5x" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="fhO-gg-TMo"/>
-                            <constraint firstItem="Jqv-bM-c5x" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="45" id="zPi-qc-TpX"/>
+                            <constraint firstItem="bEH-Xn-7yq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="Wef-jW-qOl"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bEH-Xn-7yq" secondAttribute="trailing" constant="40" id="Z88-Je-nH2"/>
+                            <constraint firstItem="bEH-Xn-7yq" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="hLE-OB-JDy"/>
+                            <constraint firstItem="bEH-Xn-7yq" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="m7w-7G-eaA"/>
                         </constraints>
                     </view>
                 </viewController>

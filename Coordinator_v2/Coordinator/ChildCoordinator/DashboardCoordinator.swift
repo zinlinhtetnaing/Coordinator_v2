@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class DashboardCoordinator: NSObject, Coordinator {
+class DashboardCoordinator: BaseRouter, Coordinator {
     
     weak var parentCoordinator: SignInCoordinator?
     
@@ -18,12 +18,16 @@ class DashboardCoordinator: NSObject, Coordinator {
     
     init(_ navigationController: BaseNavigationController) {
         self.navigationController = navigationController
+        super.init(rootController: navigationController)
     }
     
     func start() {
         let vc = DashboardViewController.instatiate(storyboard: .dashboard)
         vc.coordinator = self
-        self.navigationController.pushViewController(vc, animated: true)
+        vc.modalPresentationStyle = .fullScreen
+        transition(.push(scene: vc, animated: false))
+//        transition(.push(scene: vc, animated: false))
+//        navigationController.pushViewController(vc, animated: true)//
         /*
          vc.navigationController?.navigationItem.hidesBackButton = true
          navigationController.dismiss(animated: true) {
@@ -44,6 +48,12 @@ extension DashboardCoordinator {
         childCoordinators.append(child)
         debugPrint("Dashboard child count", childCoordinators.count)
         child.start()
+    }
+    
+    func showInfoBottomSheet() {
+        let infoBottomSheetVC = InfoBottomSheet(String(describing: InfoBottomSheet.self))
+        infoBottomSheetVC.preferredSheetSizing = .medium
+        transition(.modal(scene: infoBottomSheetVC, animated: false))
     }
     
 }
